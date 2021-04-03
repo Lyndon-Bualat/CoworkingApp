@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+    <title>Co-working App</title>
+</head>
+
+<body>
+    <header>
+        <h1>Co-Working App</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body">
+        <br><br>
+        <h2>Enter User Information</h2>
+        <br> 
+        <label for="name">Name:</label>
+        <input id="name" placeholder = "Enter Name" type="text">
+        <br> <br>
+        <label for="phone">Phone:</label>
+        <input id="phone" placeholder = "Enter Phone" type="number">
+        <br> <br>
+        <label for="email">Email:</label>
+        <input id="email" placeholder = "Enter Email" type="text">
+        <br> <br>
+        <label for="coworker">Coworker</label>
+        <input type="radio" id="coworker" name="role" value="Coworker"> &nbsp&nbsp
+        <label for="owner">Owner</label>
+        <input type="radio" id="owner" name="role" value="Owner"> 
+        <br><br>
+        <button type="submit" id="submit" onclick="SubmitInfo()">Submit</button>
+        <br><br>     
+    </div>
+    <div class="page">
+
+    </div>
+
+</body>
+
+<footer>
+    <div class="footer">
+        <div>
+           <div class="follow">Follow Us</div>
+           <ul>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Github</a></li>
+           </ul>
+        </div>
+        <div>
+           <div class="follow">Contact Us</div>
+           <ul>
+              <li><a href="">403-123-4567</a></li>
+              <li><a href="">CoWorking@gmail.com</a></li>
+           </ul>
+        </div>
+        </div>    
+    <h5> &copy; Copyright 2021 Co-working App. All rights reserved</h5>
+</footer>
+ <script type="text/javascript" src="script.js"></script>
+</html>

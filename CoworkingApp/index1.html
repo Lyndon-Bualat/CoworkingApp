@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+    <title>Co-working App</title>
+</head>
+
+<body onload="ShowOwner()">
+    <header>
+        <h1>Co-Working App</h1>
+        <div id="userName"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid">
+    <div class="property">
+        <h4>Enter Property To Store</h4>
+        <br> 
+        <input id="pNumber" placeholder = "Property Number" type="number">
+        <br><br>
+        <input id="pAddress" placeholder = "Enter Address" type="text">
+        <br><br>
+        <input id="pNeighbor" placeholder = "Enter Neighborhood" type="text">
+        <br><br>
+        <input id="pSquare" placeholder = "Square Feet" type="number">
+        <br><br>
+        <label>Parking Garage: </label> &nbsp&nbsp
+        <label for="yes">Yes</label>
+        <input type="radio" id="yesG" name="garage" value="Yes">
+        <label for="no">No</label>
+        <input type="radio" id="noG" name="garage" value="No"> 
+        <br><br>
+        <label>Public Transportation: </label> &nbsp&nbsp
+        <label for="yes">Yes</label>
+        <input type="radio" id="yesT" name="transport" value="Yes"> 
+        <label for="no">No</label>
+        <input type="radio" id="noT" name="transport" value="No"> 
+        <br><br>
+        <button type="submit" id="submit" onclick="SubmitProperty()">Add Property</button>
+        <br><br>     
+    </div>
+
+      <div class="property">
+        <h4>Enter Property Number to be listed as rented workspace</h4>
+        <br>
+        <input id="wSpace" placeholder = "Property Number" type="number">
+        <br><br>
+        <input id="wWork" placeholder = "Type of workspace" type="text">
+        <br><br>
+        <input id="wSeat" placeholder = "Number of Seats" type="number">
+        <br><br>
+        <label>Smoking Allowed: </label> &nbsp&nbsp
+        <label for="yes">Yes</label>
+        <input type="radio" id="wYes" name="smoke" value="Yes"> 
+        <label for="no">No</label>
+        <input type="radio" id="wNo" name="smoke" value="No"> 
+        <br><br>
+        <label for="">Availability Date: </label> &nbsp&nbsp
+        <input id="wDate" type="date">
+        <br><br>
+        <label for="">Lease Term: </label> &nbsp&nbsp
+        <input id="wTerm" type="date">
+        <br><br>
+        <label for="">Price: </label> &nbsp&nbsp
+        <input id="wPrice" type="number" placeholder="Enter Workspace Price">
+        <br><br>
+        <button type="submit" id="submit" onclick="addWorkspace()">Add Workspace</button> &nbsp&nbsp
+    </div>
+
+    <div class="property">
+        <h4>Properties</h4>
+        <br>
+        <!-- <button type="submit" id="submit" onclick="ShowProperty()">Show Property</button> -->
+        <div id="propertyDisplay"></div>
+    </div>
+
+   <div class="property">
+        <h4>Workspaces</h4>
+        <br>
+        <!-- <button type="submit" id="submit" onclick="ShowWorkspace()">Show Workspace</button> -->
+        <div id="workDisplay"></div>
+    </div>
+
+
+    <div class="property">
+        <h4> Enter a property number to remove 
+        <br> Removing a property will also remove the rented property as workspace
+        <br> This will allow you to modify properties and workspace
+        <br> Enter Information again to update information
+        </h4>
+        <br>
+        <button type="submit" id="remove" onclick="RemoveProperty()">Remove Property</button>
+        <input id="pRemove1" type="number" placeholder="Enter Property Number">
+        <br><br>
+        <h4>Remove a workspace</h4>
+        <br>
+        <button type="submit" id="remove" onclick="RemoveSpace()">Remove Workspace</button>
+        <input id="pRemove2" type="number" placeholder="Workspace Property Num">
+    </div>
+
+     <div class="property">
+        <h4>Save Property and Workspace</h4>
+        <br>
+        <button type="submit" id="submit" onclick="SaveProperty()">Save Information</button>
+        <div id="propertyDisplay"></div>
+    </div>
+
+
+    </div>
+ 
+</body>
+
+<footer>
+    <div class="footer">
+        <div>
+           <div class="follow">Follow Us</div>
+           <ul>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Github</a></li>
+           </ul>
+        </div>
+        <div>
+           <div class="follow">Contact Us</div>
+           <ul>
+              <li><a href="">403-123-4567</a></li>
+              <li><a href="">CoWorking@gmail.com</a></li>
+           </ul>
+        </div>
+        </div>    
+    <h5> &copy; Copyright 2021 Co-working App. All rights reserved</h5>
+</footer>
+
+ <script type="text/javascript" src="script.js"></script>
+</html>
